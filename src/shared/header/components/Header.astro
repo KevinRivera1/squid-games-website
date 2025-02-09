@@ -1,0 +1,97 @@
+---
+import IconFaceBook from "../../../assets/icon/IconFaceBook.astro";
+import IconInstagram from "../../../assets/icon/IconInstagram.astro";
+import IconTwitter from "../../../assets/icon/IconTwitter.astro";
+---
+
+<header class="text-white font-bold sticky top-0">
+  <div class="container mx-auto flex items-center justify-between px-8 py-4">
+    <!-- Logo principal -->
+    <div class="flex-1">
+      <a href="/" aria-label="Inicio">
+        <img
+          src="/images/logo-squid.svg"
+          alt="Logo principal"
+          width="81"
+          height="280"
+        />
+      </a>
+    </div>
+
+    <!-- Menú de navegación principal -->
+    <nav class="hidden lg:block" aria-label="Menú principal">
+      <ul class="flex gap-8 items-center">
+        <li>
+          <a href="/rules-game" class="hover:underline active:underline">
+            RULES OF THE GAME
+          </a>
+        </li>
+        <li>
+          <a href="/" class="rounded">
+            <img
+              src="/images/logo-netflix.svg"
+              alt="Logo Netflix"
+              class="aspect-video"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="/live" class="hover:underline active:underline">LIVE</a>
+        </li>
+        <li>
+          <a href="/play" class="hover:underline active:underline">PLAY</a>
+        </li>
+        <li>
+          <a href="/die" class="hover:underline active:underline">DIE</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navegación de redes sociales -->
+    <nav
+      class="flex flex-1 justify-end items-center gap-2 px-4"
+      aria-label="Redes sociales"
+    >
+      <ul class="flex gap-2 items-center">
+        <li>
+          <a href="https://www.facebook.com/" aria-label="Facebook">
+            <IconFaceBook class="w-5 h-5" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" aria-label="Instagram">
+            <IconInstagram class="w-5 h-5" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/" aria-label="Twitter">
+            <IconTwitter class="w-5 h-5" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Botón para menú móvil -->
+    <button
+      class="menu-mobile lg:hidden p-2"
+      aria-label="Abrir menú"
+      type="button"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 12h10"
+        ></path>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 18h4"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</header>
