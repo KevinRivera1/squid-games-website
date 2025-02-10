@@ -2,19 +2,15 @@
 import IconFaceBook from "../../../assets/icon/IconFaceBook.astro";
 import IconInstagram from "../../../assets/icon/IconInstagram.astro";
 import IconTwitter from "../../../assets/icon/IconTwitter.astro";
+import LogoSquid from "../../../assets/icon/LogoSquid.astro";
 ---
 
 <header class="text-white font-bold sticky top-0 w-full z-50">
   <div class="container mx-auto flex items-center justify-between px-8 py-4">
     <!-- Logo principal -->
     <div class="flex-1">
-      <a href="/" aria-label="Inicio">
-        <img
-          src="/images/logo-squid.svg"
-          alt="Logo principal"
-          width="81"
-          height="280"
-        />
+      <a href="/" aria-label="Inicio Squid Games">
+        <LogoSquid class="h-6 text-pink-600" />
       </a>
     </div>
 
@@ -79,18 +75,18 @@ import IconTwitter from "../../../assets/icon/IconTwitter.astro";
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6"
-        fill="none"
         viewBox="0 0 24 24"
+        fill="none"
         stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        width="24"
+        height="24"
         stroke-width="2"
-        aria-hidden="true"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16"></path>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7 12h10"
-        ></path>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M10 18h4"
-        ></path>
+        <path d="M4 6h16"></path>
+        <path d="M7 12h13"></path>
+        <path d="M10 18h10"></path>
       </svg>
     </button>
   </div>
