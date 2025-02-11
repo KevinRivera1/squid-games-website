@@ -1,0 +1,33 @@
+---
+import { CardItems } from "../../../data/card/card.data";
+---
+
+{
+  CardItems.map((card) => (
+    <article class="card w-[7rem] h-[10rem] rounded text-white font-bold">
+      <figure class="card-image bg-[#0d0d0d] relative">
+        <img
+          class="card-img rounded aspect-square object-cover object-center"
+          src={card.image}
+          alt={card.name}
+          width="251"
+          height="251"
+        />
+        <div class="card-content absolute bottom-0 left-0 p-2">
+          <small class="card-number text-[#0aafc9]">
+            {card.numberParticipante}
+          </small>
+        </div>
+      </figure>
+      <div class="card-footer py-1">
+        <h3 class="card-name text-[.8rem] text-pretty">{card.name}</h3>
+      </div>
+    </article>
+  ))
+}
+
+<style>
+  .card-img {
+    mask-image: linear-gradient(black 60%, transparent);
+  }
+</style>
