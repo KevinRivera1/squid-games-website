@@ -1,4 +1,6 @@
 ---
+import FooterContainer from "../shared/footer/components/FooterContainer.astro";
+import HeaderContainer from "../shared/header/components/HeaderContainer.astro";
 import "./src/styles/global.css";
 
 interface Props {
@@ -18,15 +20,25 @@ const { title, description }: Props = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="relative min-h-screen">
+    <!-- Background todo la web -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 z-[-2] min-h-screen w-full bg-[#0d0d0d] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,97,235,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+    <HeaderContainer />
     <main>
       <slot />
     </main>
+    <FooterContainer />
   </body>
 </html>
 
 <style>
-  :where(*) {
+  :where(*),
+  :where(*::before),
+  :where(*::after) {
     margin: 0;
     padding: 0;
     border: 0;
@@ -35,19 +47,25 @@ const { title, description }: Props = Astro.props;
   }
 
   :where(html) {
+    --espaciado-base: 1.4em;
     font-size: 100%;
     line-height: var(--espaciado-base);
     scroll-behavior: smooth;
   }
-  :where(body) {
-    --espaciado-base: 1.4em;
-    height: 100vh;
-    height: 100dvh;
-    min-height: 100vh;
-    font-size: 1rem;
-    line-height: var(--espaciado-base);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    hyphens: auto;
+
+  :where(img, picture, video, iframe, figure) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  :where(svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+    fill: currentColor;
   }
 </style>
