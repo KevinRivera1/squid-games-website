@@ -1,18 +1,25 @@
 <!-- Sección Hero a pantalla completa -->
 <section
-  class="hero relative flex items-center justify-center overflow-hidden text-white min-h-screen w-full"
+  class="hero relative flex items-center justify-center overflow-hidden text-white w-full"
   aria-label="Imagen principal de Squid Game"
 >
   <figure
-    class="w-full h-full flex items-center justify-center overflow-hidden"
+    class="flex items-center justify-center overflow-hidden"
     aria-hidden="true"
   >
     <img
       src="images/hero-squid.png"
       alt="Ilustración principal de Squid Game"
-      class="object-cover object-center h-screen w-auto"
+      class="hero-img object-cover object-center h-[86vh]"
       loading="lazy"
       decoding="async"
     />
   </figure>
 </section>
+
+<style>
+  .hero-img {
+    mask-image: linear-gradient(black 80%, transparent);
+    filter: drop-shadow(0 0 0.625rem rgba(255, 255, 255, 0.5));
+  }
+</style>
