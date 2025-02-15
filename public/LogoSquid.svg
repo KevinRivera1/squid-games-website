@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 145 42">
+  <defs>
+    <clipPath id="e">
+      <use xlink:href="#a" fill-rule="evenodd" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="f">
+      <use xlink:href="#b"/>
+    </clipPath>
+    <clipPath id="g">
+      <use xlink:href="#c"/>
+    </clipPath>
+    <clipPath id="h">
+      <use xlink:href="#d"/>
+    </clipPath>
+    <path id="a" d="M145 0v42H0V0h145Z"/>
+    <path id="b" d="M103 0h42v42h-42V0Z"/>
+    <path id="c" d="m72 0 21 42H51L72 0Z"/>
+    <path id="d" d="M0 21.5C0 10.1782 9.17816 1 20.5 1 31.8218 1 41 10.1782 41 21.5S31.8218 42 20.5 42C9.17816 42 0 32.8218 0 21.5Z"/>
+  </defs>
+  <path fill="none" d="M145 0v42H0V0h145Z"/>
+  <g clip-path="url(#e)">
+    <use xlink:href="#b" fill="none" fill-opacity="0" fill-rule="evenodd"/>
+    <g clip-path="url(#f)">
+      <use xlink:href="#b" fill="none" stroke="#ff1b7b" stroke-width="8"/>
+    </g>
+    <use xlink:href="#c" fill="none" fill-opacity="0" fill-rule="evenodd"/>
+    <g clip-path="url(#g)">
+      <use xlink:href="#c" fill="none" stroke="#ff1b7b" stroke-width="8"/>
+    </g>
+    <use xlink:href="#d" fill="none" fill-opacity="0" fill-rule="evenodd"/>
+    <g clip-path="url(#h)">
+      <use xlink:href="#d" fill="none" stroke="#ff1b7b" stroke-width="8"/>
+    </g>
+  </g>
+</svg>
