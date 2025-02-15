@@ -1,0 +1,12 @@
+---
+interface Props {
+  year: string;
+  author: string;
+}
+
+const { year, author }: Props = Astro.props;
+---
+
+<footer class="text-[#ff1b7b] text-center font-bold text-sm">
+  <p class="uppercase">© {year}, REALIZADO POR {author}</p>
+</footer>
