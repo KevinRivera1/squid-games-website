@@ -20,17 +20,22 @@
 </button>
 
 <script>
-  let sound = new Audio("/squid_game.mp3");
+  const playButton = document.getElementById("play");
+  const sound = new Audio("/squid_game.mp3");
+  let isPlaying = false;
 
-  play.addEventListener("click", () => {
-    sound.play();
+  playButton.addEventListener("click", () => {
+    if (isPlaying) {
+      sound.pause();
+      isPlaying = false;
+    } else {
+      sound.play();
+      isPlaying = true;
+    }
   });
 
   sound.addEventListener("ended", () => {
     sound.currentTime = 0;
     sound.play();
   });
-
-  sound.play();
-
 </script>
