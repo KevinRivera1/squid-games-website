@@ -3,7 +3,16 @@ import Card from "./Card.astro";
 ---
 
 <section
-  class="flex gap-4 w-[24rem] absolute bottom-12 right-0 overflow-hidden overflow-x-scroll"
+  class="card-container flex gap-4 w-[24rem] absolute bottom-12 right-0 overflow-hidden overflow-x-scroll"
 >
   <Card />
 </section>
+
+<style>
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .card-container {
+    scrollbar-width: none;
+  }
+</style>
