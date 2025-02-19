@@ -1,7 +1,4 @@
-<button
-  id="play"
-  class="btn btn-play absolute left-35 bottom-60 md:left-12 md:bottom-12 flex items-center justify-start text-xl"
->
+<button id="play" class="btn btn-play flex items-center justify-center gap-2">
   <svg
     class="p-2 size-14 bg-[#ff1b7b] rounded-full cursor-pointer"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +12,7 @@
     ></path></svg
   >
   <div class="text-btn w-50 font-bold">
-    <span>"STAY ALIVE OR STAY HUMAN"</span>
+    <span class="text-2xl">"STAY ALIVE OR STAY HUMAN"</span>
   </div>
 </button>
 
@@ -24,7 +21,7 @@
   const sound = new Audio("/squid_game.mp3");
   let isPlaying = false;
 
-  playButton.addEventListener("click", () => {
+  playButton?.addEventListener("click", () => {
     if (isPlaying) {
       sound.pause();
       isPlaying = false;
