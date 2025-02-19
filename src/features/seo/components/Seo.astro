@@ -18,8 +18,11 @@ const {
 
 <!-- Primary Meta Tags -->
 <meta name="robots" content="index, follow" />
+
+<meta name="theme-color" content="#000000" />
 <title>{title}</title>
 <meta name="description" content={description} />
+<meta name="author" content="Kevin Rivera" />
 <link rel="canonical" href={canonicalURL.href} />
 
 <!-- Open Graph / Facebook -->
@@ -40,3 +43,15 @@ const {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.site).href} />
+
+<!-- Datos estructurados -->
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": title,
+  "description": description,
+  "url": url,
+  "image": new URL(image, Astro.site).href
+})}
+</script>
