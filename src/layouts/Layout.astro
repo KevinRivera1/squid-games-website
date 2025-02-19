@@ -1,14 +1,8 @@
 ---
-import FooterContainer from "../shared/footer/components/FooterContainer.astro";
-import HeaderContainer from "../shared/header/components/HeaderContainer.astro";
+import Seo from "@features/seo/components/Seo.astro";
+import FooterContainer from "@shared/footer/components/FooterContainer.astro";
+import HeaderContainer from "@shared/header/components/HeaderContainer.astro";
 import "@styles/global.css";
-
-interface Props {
-  title: string;
-  description: string;
-}
-
-const { title, description }: Props = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +12,12 @@ const { title, description }: Props = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/LogoSquid.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <Seo
+      title="SQUID GAMES | JUEGOS DEL CALAMAR"
+      description="¿Tienes lo que se necesita para superar los desafíos y ganar el premio final? Explora nuestra web interactiva y revive la tensión, la emoción y el peligro de la serie que conquistó al mundo."
+      image="images/hero-squid.png"
+      url="https://squid-games-website.vercel.app/"
+    />
   </head>
   <body class="relative min-h-screen">
     <!-- Background todo la web -->
