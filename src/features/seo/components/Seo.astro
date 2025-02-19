@@ -45,13 +45,14 @@ const {
 <meta property="twitter:image" content={new URL(image, Astro.site).href} />
 
 <!-- Datos estructurados -->
-<script type="application/ld+json">
-{JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": title,
-  "description": description,
-  "url": url,
-  "image": new URL(image, Astro.site).href
-})}
-</script>
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: title,
+    description: description,
+    url: url,
+    image: new URL(image, Astro.site).href,
+  })}
+/>
