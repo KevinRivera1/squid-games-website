@@ -2,8 +2,15 @@
 import Card from "./Card.astro";
 ---
 
-<section
-  class="flex gap-4 w-[24rem] absolute bottom-12 right-0 overflow-hidden overflow-x-scroll"
->
+<section class="card-container flex gap-1 overflow-hidden">
   <Card />
 </section>
+
+<style>
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .card-container {
+    scrollbar-width: none;
+  }
+</style>
