@@ -6,29 +6,31 @@ import ButtonPlay from "@shared/button/ButtonPlay.astro";
 <!-- Sección Hero a pantalla completa -->
 <section
   class="hero relative flex items-center justify-center overflow-hidden text-white w-full"
+  role="region"
   aria-label="Imagen principal de Squid Game"
 >
-  <figure
-    class="flex items-center justify-center overflow-hidden"
-    aria-hidden="true"
-  >
+  <figure class="w-full h-full overflow-hidden" aria-hidden="true">
     <img
-      src="images/hero-squid.png"
+      src="images/hero-squid.webp"
       alt="Ilustración principal de Squid Game"
-      class="hero-img object-cover object-center h-[86vh]"
+      class="hero-img w-full h-[86vh] object-scale-down object-center aspect-video"
+      width="1920"
+      height="1080"
       loading="lazy"
       decoding="async"
     />
   </figure>
 
-  <section class="hero-contenido absolute bottom-0 w-full">
-    <div
-      class="hero-wrapper size-full container mx-auto flex flex-col md:flex-row md:justify-between gap-10 md:gap-0 items-center px-8 py-14"
-    >
-      <ButtonPlay />
-      <CardContainer />
+  <div class="absolute bottom-0 w-full z-10">
+    <div class="container mx-auto px-4 md:px-8 py-10 md:py-14 h-full">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8"
+      >
+        <ButtonPlay />
+        <CardContainer />
+      </div>
     </div>
-  </section>
+  </div>
 </section>
 
 <style>
