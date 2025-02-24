@@ -1,18 +1,18 @@
 ---
 interface Props {
-  title: string;
-  description: string;
-  image: string;
-  url?: string;
+	title: string;
+	description: string;
+	image: string;
+	url?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {
-  title,
-  description,
-  image,
-  url = "https://squid-games-website.vercel.app/",
+	title,
+	description,
+	image,
+	url = "https://squid-games-website.vercel.app/",
 } = Astro.props as Props;
 ---
 
